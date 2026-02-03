@@ -5,28 +5,166 @@
   <title>Hospital Eduardo Santos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Sistema de citas y atención digital del Hospital Eduardo Santos, La Unión, Nariño." />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.85);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hospital Eduardo Santos</h1>
-  <p><strong>Segundo Nivel</strong></p>
+  <div class="container">
+    <div class="card">
+      <span class="badge">Segundo Nivel</span>
 
-  <p>
-    Sistema de citas y atención digital del
-    <strong>Hospital Eduardo Santos</strong>.
-  </p>
+      <h1>Hospital Eduardo Santos</h1>
+      <p class="subtitle">Sistema de citas y atención digital</p>
 
-  <p>
-    <strong>Ubicación:</strong><br>
-    La Unión, Nariño<br>
-    Barrio San Carlos
-  </p>
+      <div class="section">
+        <p>
+          Plataforma de comunicación y gestión de citas del
+          <strong>Hospital Eduardo Santos</strong>, orientada a mejorar la
+          atención y el acceso a los servicios de salud.
+        </p>
+      </div>
 
-  <p>
-    Operado por <strong>JemDev</strong> como proveedor tecnológico.
-  </p>
+      <div class="section">
+        <p>
+          <strong>Ubicación:</strong><br>
+          La Unión, Nariño<br>
+          Barrio San Carlos
+        </p>
+      </div>
 
-  <p>
-    Contacto técnico: <a href="mailto:soporte@jemdev.lat">soporte@jemdev.lat</a>
-  </p>
+      <footer>
+        <div class="footer-row">
+          <span>Operado por <strong>JemDev</strong></span>
+          <span>
+            <a class="whatsapp" href="https://wa.me/573022407069" target="_blank">
+              WhatsApp: +57 302 240 7069
+            </a>
+          </span>
+        </div>
+
+        <div class="footer-row">
+          <span>Soporte técnico:</span>
+          <span>
+            <a href="mailto:soporte@jemdev.lat">soporte@jemdev.lat</a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
